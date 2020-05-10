@@ -20,3 +20,19 @@ def test_remetente(destinatario):
         'Turma Luiz Vital'
     )
     assert destinatario in resultado
+
+
+@pytest.mark.parametrize(
+    'destinatario',
+    ['', 'renzo']
+)
+def test_remetente_invalido(destinatario):
+    enviador = Enviador()
+    with pytest.raises(EmailInvalido):
+        enviador.enviar(
+            destinatario,
+            'luciano@python.pro.br',
+            'Curso Python Pro',
+            'Turma Luiz Vital'
+        )
+        assert destinatario
