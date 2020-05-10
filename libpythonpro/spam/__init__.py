@@ -1,0 +1,2 @@
+class Enviador():
+    pass
