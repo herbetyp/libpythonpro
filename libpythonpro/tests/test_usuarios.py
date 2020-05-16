@@ -16,10 +16,12 @@ def sessao(conexao):
     sessao_obj.fechar()
 
 
-@pytest.fixture
+@pytest.fixture(scope='module')
 def conexao():
+    # Setup
     conexao_obj = Conexao()
     yield conexao_obj
+    # Tear Down
     conexao_obj.fechar()
 
 
