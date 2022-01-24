@@ -7,7 +7,7 @@ entrypoints==0.3
 flake8==3.7.9
 idna==2.9
 importlib-metadata==1.6.0
-mccabe==0.6.1
+mccabe==0.7.0
 more-itertools==8.2.0
 packaging==20.3
 pluggy==0.13.1
